@@ -1,0 +1,22 @@
+$background-dark: #512DA8;
+$background-light: #D1C4E9;
+$white-text: #ddd;
+
+.login-modal{
+	background-color: $background-light;
+
+}
+
+.login-modal-header{
+	background-color: $background-dark;
+	color: $white-text;
+}
+.reserve-tble-modal{
+	background-color: $background-light;
+
+}
+
+.reserve-tble-modal-header{
+	background-color: $background-dark;
+	color: $white-text;
+}
