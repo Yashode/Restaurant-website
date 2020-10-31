@@ -218,7 +218,7 @@
     </header>
 
     <div class="container">
-        <div class=" caro">
+        <div class="caro">
             <div class="">
                 <div id="caro" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
@@ -244,7 +244,7 @@
                         </div>
                         
                         <div class="carousel-item caro-item">
-                            <img class="d-block img-fluid caro-img" src="img/alberto.png" alt="alberto">
+                            <img class="d-block img-fluid caro-img" src="img/alberto.jpg" alt="alberto">
                             <div class="carousel-caption d-none d-md-block"> 
                                 <h2>Yash Chaudhary</h2>
                                 <h4>Executive Chef</h4>
@@ -254,6 +254,7 @@
                             </div>
                         </div>
                         
+                <div>
                     </div>
                         <ol class="carousel-indicators">
                             <li data-target="caro" data-slide-to="0" class="active"></li>
@@ -267,14 +268,15 @@
                         <a class="carousel-control-next" href="#caro" role="button" data-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </a>
-
-                        <div class="btn-group" id="caro-btn">
+                    </div>
+                    
+                    <div class="btn-group" id="caro-btn">
                         <button class="btn btn-danger btn-sm" id="carouselButton">
                         <span id="carousel-button-icon" class="fa fa-pause"></span>
                         </button>
 
-                        </div>
                     </div>
+                </div>
 
 
             </div>
@@ -327,7 +329,7 @@
             </div>
             <div class="col col-sm order-sm-first col-md">
                 <div class="media">
-                    <img src="img/alberto.png" class="d-flex mr-3 img-thumbnail align-self-center">
+                    <img src="img/alberto.jpg" class="d-flex mr-3 img-thumbnail align-self-center">
                     <div class="media-body">  
                     <h2>Yash Chaudhary</h2>
                     <h4>Executive Chef</h4>
@@ -406,17 +408,19 @@
     <script>
         $(document).ready(function(){
             
-            $("#caro").carousel( { interval: 2000 } );
+            $("#caro").carousel( { interval: 500} );
             $("#carouselButton").click(function(){
                 if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#caro").carousel('pause');
+                    
                     $("#carouselButton").children("span").removeClass('fa-pause');
                     $("#carouselButton").children("span").addClass('fa-play');
+                    slider.carousel('pause');
                 }
                 else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#caro").carousel('cycle');
+                    
                     $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
+                    $("#carouselButton").children("span").addClass('fa-pause');    
+                    slider.carousel({'pause':false});                
                 }
             });
 
